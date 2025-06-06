@@ -200,8 +200,9 @@ section {
 
 /* About Section */
 .about {
+    padding: 100px 0;
     background: rgba(17, 24, 39, 0.5);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
 }
 
 .about-content {
@@ -236,9 +237,10 @@ section {
 
 /* Skills Section */
 .skills {
+    padding: 100px 0;
     background: rgba(31, 41, 55, 0.5);
     color: white;
-    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+    
 }
 
 .skills-grid {
@@ -302,8 +304,8 @@ section {
 
 /* Projects Section */
 .projects {
+    padding: 100px 0;
     background: rgba(17, 24, 39, 0.5);
-    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 }
 
 .projects-grid {
@@ -454,6 +456,7 @@ section {
 
 /* Contact Section */
 .contact {
+    padding: 100px 0;
     background: rgba(31, 41, 55, 0.5);
     color: white;
 }
