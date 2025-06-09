@@ -12,6 +12,7 @@ function initializePortfolio() {
     setupContactForm();
     createDynamicParticles();
     initializeTypewriter();
+    initializeSkillIcons();
 }
 
 // Mobile Navigation Toggle
@@ -48,6 +49,32 @@ function setupMobileNavigation() {
             });
         });
     }
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', 
+            menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
 }
 
 // Smooth Scrolling for navigation links
@@ -476,3 +503,105 @@ function throttle(func, limit) {
 window.addEventListener('scroll', throttle(() => {
     // Additional scroll-based functionality can be added here
 }, 16)); // ~60fps
+
+// Initialize skill icons
+function initializeSkillIcons() {
+    const skillIcons = document.querySelectorAll('.skill-icon');
+    
+    skillIcons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            // Remove active class from all icons
+            skillIcons.forEach(i => i.classList.remove('active'));
+            
+            // Add active class to clicked icon
+            icon.classList.add('active');
+            
+            // Show tooltip for a longer duration on click
+            const tooltip = icon.getAttribute('data-tooltip');
+            const tooltipElement = document.createElement('div');
+            tooltipElement.className = 'click-tooltip';
+            tooltipElement.textContent = tooltip;
+            
+            // Remove any existing click tooltips
+            document.querySelectorAll('.click-tooltip').forEach(t => t.remove());
+            
+            // Add new tooltip
+            document.body.appendChild(tooltipElement);
+            
+            // Position tooltip
+            const rect = icon.getBoundingClientRect();
+            tooltipElement.style.top = `${rect.top - tooltipElement.offsetHeight - 10}px`;
+            tooltipElement.style.left = `${rect.left + (rect.width / 2) - (tooltipElement.offsetWidth / 2)}px`;
+            
+            // Remove tooltip after 2 seconds
+            setTimeout(() => {
+                tooltipElement.remove();
+                icon.classList.remove('active');
+            }, 2000);
+        });
+    });
+}
+
+// Typing Effect
+const typingText = document.getElementById('typing-text');
+const phrases = [
+    'Machine Learning Engineer',
+    'Data Scientist',
+    'NLP Specialist',
+    'AI Enthusiast'
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingDelay = 100;
+
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingDelay = 50;
+    } else {
+        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingDelay = 100;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typingDelay = 2000; // Pause at end of phrase
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingDelay = 500; // Pause before starting new phrase
+    }
+
+    setTimeout(typeEffect, typingDelay);
+}
+
+// Start typing effect when page loads
+window.addEventListener('load', typeEffect);
+
+// Fade In Animation
+function handleFadeIn() {
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Initialize fade-in animation when page loads
+window.addEventListener('load', handleFadeIn);
