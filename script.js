@@ -191,91 +191,54 @@ function animateSkillBars() {
 
 // Contact form functionality
 function setupContactForm() {
-    const form = document.querySelector('.contact-form');
-    if (!form) return;
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
 
-    form.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
-        const formData = new FormData(form);
-        const formObject = {};
-        
-        // Convert FormData to object
-        for (let [key, value] of formData.entries()) {
-            formObject[key] = value;
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
+
+        try {
+            formStatus.textContent = 'Sending message...';
+            formStatus.style.color = '#666';
+
+            // Check if server is running
+            try {
+                const response = await fetch('http://localhost:3000/send-message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent successfully!';
+                    formStatus.style.color = '#4CAF50';
+                    contactForm.reset();
+                } else {
+                    throw new Error(data.error || 'Failed to send message');
+                }
+            } catch (fetchError) {
+                console.error('Server connection error:', fetchError);
+                if (fetchError.message === 'Failed to fetch') {
+                    throw new Error('Cannot connect to server. Please make sure the server is running on port 3000.');
+                }
+                throw fetchError;
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            formStatus.textContent = 'Error: ' + error.message;
+            formStatus.style.color = '#f44336';
         }
-
-        // Basic validation
-        if (!validateForm(formObject)) {
-            return;
-        }
-
-        // Show loading state
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        // Simulate form submission (replace with actual endpoint)
-        setTimeout(() => {
-            showFormMessage('Thank you! Your message has been sent successfully.', 'success');
-            form.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
     });
-}
-
-// Form validation
-function validateForm(data) {
-    const errors = [];
-    
-    if (!data.name || data.name.length < 2) {
-        errors.push('Name must be at least 2 characters long');
-    }
-    
-    if (!data.email || !isValidEmail(data.email)) {
-        errors.push('Please enter a valid email address');
-    }
-    
-    if (!data.message || data.message.length < 10) {
-        errors.push('Message must be at least 10 characters long');
-    }
-    
-    if (errors.length > 0) {
-        showFormMessage(errors.join('<br>'), 'error');
-        return false;
-    }
-    
-    return true;
-}
-
-// Email validation
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Show form messages
-function showFormMessage(message, type) {
-    const existingMessage = document.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `form-message ${type}`;
-    messageDiv.innerHTML = message;
-    
-    const form = document.querySelector('.contact-form');
-    form.appendChild(messageDiv);
-    
-    // Auto-remove after 5 seconds
-    setTimeout(() => {
-        if (messageDiv.parentNode) {
-            messageDiv.remove();
-        }
-    }, 5000);
 }
 
 // Dynamic particle background
