@@ -400,7 +400,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" action="https://formsubmit.co/mohidnaghman0@gmail.com" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -413,6 +413,12 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
+                    <!-- Honeypot to prevent spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Thank you page after submission -->
+                    <input type="hidden" name="_next" value="https://mohidnaghman1.github.io/thank-you.html">
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
