@@ -6,6 +6,12 @@
     <title>Mohid Naghman - AI & ML Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Add your EmailJS public key here
+        })();
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -413,12 +419,10 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
-                    <!-- Honeypot to prevent spam -->
-                    <input type="text" name="_honey" style="display:none">
-                    <!-- Disable Captcha -->
+                    <!-- Prevent spam -->
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- Thank you page after submission -->
-                    <input type="hidden" name="_next" value="https://mohidnaghman1.github.io/thank-you.html">
+                    <!-- Success page -->
+                    <input type="hidden" name="_next" value="https://mohidnaghman1.github.io/Portfolio/success.html">
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
