@@ -324,8 +324,6 @@ function initializeTypewriter() {
     if (!typewriterElement) return;
     
     const texts = [
-        'Full Stack Developer',
-        'UI/UX Designer',
         'Problem Solver',
         'Creative Thinker'
     ];
@@ -510,7 +508,7 @@ const typingText = document.getElementById('typing-text');
 const phrases = [
     'Machine Learning Engineer',
     'Data Scientist',
-    'NLP Specialist',
+    'Aspiring NLP Engineer',
     'AI Enthusiast'
 ];
 
