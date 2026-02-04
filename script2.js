@@ -194,51 +194,36 @@ function setupContactForm() {
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
+    contactForm.addEventListener('submit', sendEmail);
+}
 
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
+function sendEmail(e) {
+    e.preventDefault();
+    
+    const formStatus = document.getElementById('formStatus');
+    formStatus.textContent = 'Sending message...';
+    formStatus.style.color = '#666';
 
-        try {
-            formStatus.textContent = 'Sending message...';
-            formStatus.style.color = '#666';
+    const templateParams = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        to_email: 'mohidnaghman0@gmail.com'
+    };
 
-            // Check if server is running
-            try {
-                const response = await fetch('http://localhost:3000/send-message', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    formStatus.textContent = 'Message sent successfully!';
-                    formStatus.style.color = '#4CAF50';
-                    contactForm.reset();
-                } else {
-                    throw new Error(data.error || 'Failed to send message');
-                }
-            } catch (fetchError) {
-                console.error('Server connection error:', fetchError);
-                if (fetchError.message === 'Failed to fetch') {
-                    throw new Error('Cannot connect to server. Please make sure the server is running on port 3000.');
-                }
-                throw fetchError;
-            }
-        } catch (error) {
-            console.error('Form submission error:', error);
-            formStatus.textContent = 'Error: ' + error.message;
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            formStatus.textContent = 'Message sent successfully!';
+            formStatus.style.color = '#4CAF50';
+            document.getElementById('contactForm').reset();
+        }, function(error) {
+            console.log('FAILED...', error);
+            formStatus.textContent = 'Failed to send message. Please try again.';
             formStatus.style.color = '#f44336';
-        }
-    });
+        });
+
+    return false;
 }
 
 // Dynamic particle background
@@ -324,6 +309,8 @@ function initializeTypewriter() {
     if (!typewriterElement) return;
     
     const texts = [
+        'Full Stack Developer',
+        'UI/UX Designer',
         'Problem Solver',
         'Creative Thinker'
     ];
@@ -506,10 +493,10 @@ function initializeSkillIcons() {
 // Typing Effect
 const typingText = document.getElementById('typing-text');
 const phrases = [
-    'Machine Learning Engineer',
-    'Data Scientist',
-    'Aspiring NLP Engineer',
-    'AI Enthusiast'
+    'AI/ML Engineer',
+    'Generative AI Specialist',
+    'Backend Architecture Expert',
+    'Building Production-Ready AI Systems'
 ];
 
 let phraseIndex = 0;
