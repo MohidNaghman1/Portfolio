@@ -17,12 +17,7 @@
     <!-- Header -->
     <header>
         <nav class="navbar">
-            <div class="nav-brand">
-                <span class="nav-text">Navbar</span>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div>Mohid Naghman</div>
             <div class="nav-links">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -33,60 +28,38 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (BOLD, Modern) -->
     <section id="home" class="home-section hero">
-        <!-- Floating AI-themed shapes -->
+        <!-- Keep your floating shapes -->
         <div class="floating-shapes">
             <div class="shape ai-node"></div>
             <div class="shape data-cube"></div>
             <div class="shape neural-circle"></div>
         </div>
 
-        <!-- Floating Tech Icons -->
-        <div class="floating-icons-container">
-            <a href="https://www.python.org/" target="_blank" class="floating-tech-icon python" title="Python">🐍</a>
-            <a href="https://www.tensorflow.org/" target="_blank" class="floating-tech-icon tensorflow" title="TensorFlow">🧠</a>
-            <a href="https://developers.google.com/machine-learning" target="_blank" class="floating-tech-icon ml" title="Machine Learning">🤖</a>
-            <a href="https://www.datascience.com/" target="_blank" class="floating-tech-icon data" title="Data Science">📊</a>
-            <a href="https://flask.palletsprojects.com/" target="_blank" class="floating-tech-icon flask" title="Flask">⚡</a>
-            <a href="https://www.nltk.org/" target="_blank" class="floating-tech-icon nlp" title="NLP">💬</a>
-        </div>
-
         <div class="hero-content">
-            <h1 class="hero-title">Mohid Naghman</h1>
+            <h1 class="hero-title">MOHID NAGHMAN</h1>
             <h2 class="hero-subtitle">
                 <span id="typing-text" class="typing-effect"></span>
             </h2>
             <p class="hero-description">
-                Transforming data into intelligent solutions through Machine Learning, Deep Learning, and NLP. 
-                Building AI-powered applications that make a real-world impact.
+                Engineer who builds and ships AI systems end-to-end — from multi-agent LLM orchestration 
+                and RAG pipelines to event-driven backends and production deployments. 
+                <strong>Response latency &lt;2s. Query accuracy 92%.</strong>
             </p>
-            
+            <!-- Achievement Badges -->
+            <div class="achievement-badges">
+                <span class="badge">🚀 3 Production Apps</span>
+                <span class="badge">⚡ &lt;2s Latency</span>
+                <span class="badge">🎯 92% Accuracy</span>
+                <span class="badge">📊 CGPA 3.83/4.00</span>
+            </div>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">
-                    <span>My Projects</span>
-                    <span>🚀</span>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Let's Connect</span>
-                    <span>💬</span>
+                    <span>View Projects</span>
+                    <span>→</span>
                 </a>
             </div>
-        </div>
-
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/mohid-naghman/" class="social-link" title="LinkedIn" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/MohidNaghman1" class="social-link" title="GitHub" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.kaggle.com/mohidnaghman" class="social-link" title="Kaggle" target="_blank">
-                <i class="fab fa-kaggle"></i>
-            </a>
-            <a href="https://www.instagram.com/mohidnaghman/" class="social-link" title="Instagram" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a> 
         </div>
     </section>
 
@@ -98,11 +71,11 @@
                     <img src="images/Profile_pic.jpg" alt="Profile Picture" class="profile-img">
                 </div>
                 <div class="about-text">
-                    <p>An enthusiastic practitioner in AI and Data Science, with practical experience in developing intelligent systems using Machine Learning, Deep Learning, and Natural Language Processing. Skilled in Python-based development and has contributed to impactful projects such as classification systems, predictive models, and text-to-SQL applications.</p>
-                
-                    <p>Combines backend engineering with AI innovation — deploying scalable Flask applications, fine-tuning large language models, and integrating NLP capabilities into real-world tools. Committed to leveraging data-driven insights to build smart, efficient, and human-centric solutions.</p>
-                
-                    <p>Passionate about continuous learning and meaningful collaboration. When not working on AI models or analyzing datasets, explores advancements in Generative AI, experiments with new technologies, and enjoys building creative, end-to-end applications that push boundaries.</p>
+                    <p>Engineer who builds and ships AI systems — from multi-agent LLM orchestration to production backends. Track record of cutting response latency to &lt;2s and hitting 92% accuracy on unstructured data.</p>
+
+                    <p>Core expertise: LangChain/LangGraph multi-agent systems, FastAPI backends with JWT/OAuth2, Redis event queues, RAG pipelines with FAISS, and full-stack deployment (Docker, CI/CD, Vercel/Render).</p>
+
+                    <p>Comfortable owning architecture decisions, moving fast, and delivering working software that people actually use.</p>
                 </div>
             </div>
         </div>
@@ -112,173 +85,35 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title fade-in">My Skills</h2>
-            <div class="skills-grid fade-in">
-                <div class="skill-item">
-                    <i class="fas fa-robot"></i>
-                    <h3>Machine Learning</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="Scikit-learn">
-                            <span class="unicode-icon">⚙️</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="XGBoost">
-                            <span class="unicode-icon">🚀</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Decision Trees">
-                            <span class="unicode-icon">🌳</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="SVM">
-                            <span class="unicode-icon">📐</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Regression Models">
-                            <span class="unicode-icon">📈</span>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
+            <div class="skills-groups">
+                <div class="skill-group">
+                    <h3>CORE</h3>
+                    <div class="skill-tags">
+                        <span>GenAI (RAG, LangGraph, LangChain)</span>
+                        <span>Backend (FastAPI, SQLAlchemy, Auth)</span>
                     </div>
                 </div>
 
-                <div class="skill-item">
-                    <i class="fas fa-brain"></i>
-                    <h3>Deep Learning</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="TensorFlow">
-                            <span class="icon-text">TF</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="PyTorch">
-                            <span class="unicode-icon">🔥</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="CNN">
-                            <span class="unicode-icon">📊</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="ANN">
-                            <span class="unicode-icon">🕸️</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Transfer Learning">
-                            <span class="unicode-icon">🔄</span>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                <div class="skill-group">
+                    <h3>AI / ML</h3>
+                    <div class="skill-tags">
+                        <span>LLMs: Gemini, GPT, LLaMA-3</span>
+                        <span>ML/DL: PyTorch, TensorFlow, CNN</span>
                     </div>
                 </div>
 
-                <div class="skill-item">
-                    <i class="fas fa-language"></i>
-                    <h3>NLP</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="Text Preprocessing">
-                            <span class="unicode-icon">📝</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Transformers">
-                            <span class="unicode-icon">✨</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="GPT">
-                            <span class="unicode-icon">💬</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Word2Vec">
-                            <span class="unicode-icon">📖</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="NLTK">
-                            <span class="icon-text">NL</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="spaCy">
-                            <span class="unicode-icon">🌌</span>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                <div class="skill-group">
+                    <h3>INFRASTRUCTURE</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL, Redis, Docker, CI/CD</span>
                     </div>
                 </div>
 
-                <div class="skill-item">
-                    <i class="fab fa-python"></i>
-                    <h3>Python Development</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="Flask">
-                            <span class="unicode-icon">🧪</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Pandas">
-                            <span class="unicode-icon">🐼</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="NumPy">
-                            <span class="unicode-icon">🔢</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Matplotlib">
-                            <span class="unicode-icon">📊</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Seaborn">
-                            <span class="unicode-icon">📈</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="APIs">
-                            <span class="unicode-icon">🔗</span>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <h3>Databases</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="MySQL">
-                            <span class="unicode-icon">🗄️</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="SQL Queries">
-                            <span class="unicode-icon">🔍</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Data Modeling">
-                            <span class="unicode-icon">📋</span>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Data Science Tools</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="Jupyter">
-                            <span class="unicode-icon">📓</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Google Colab">
-                            <span class="unicode-icon">🔬</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Kaggle">
-                            <span class="unicode-icon">🏆</span>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Scikit-learn Pipelines">
-                            <span class="unicode-icon">⚡</span>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>Version Control & Deployment</h3>
-                    <div class="skill-icons">
-                        <div class="skill-icon" data-tooltip="Git">
-                            <i class="fab fa-git-alt"></i>
-                        </div>
-                        <div class="skill-icon" data-tooltip="GitHub">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Streamlit">
-                            <i class="fas fa-stream"></i>
-                        </div>
-                        <div class="skill-icon" data-tooltip="Flask App Hosting">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%;"></div>
+                <div class="skill-group">
+                    <h3>FULL-STACK</h3>
+                    <div class="skill-tags">
+                        <span>Next.js, TypeScript, React, Tailwind</span>
+                        <span>JWT, OAuth2, bcrypt, RBAC</span>
                     </div>
                 </div>
             </div>
@@ -292,27 +127,63 @@
             <h2 class="section-title fade-in">My Projects</h2>
             <div class="projects-grid fade-in">
 
-                <!-- Research Paper Summarizer -->
+                <!-- AI-Powered Content Platform -->
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-book-open fa-3x"></i>
                         <div class="project-overlay">
-                            <span>AI-Powered Summarization</span>
+                            <span>AI-Powered Content Platform</span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Research Paper Summarizer</h3>
-                        <p class="project-description">A Streamlit app that summarizes academic papers using LLMs. It integrates LangChain, HuggingFace Transformers, and secure environment handling with dotenv.</p>
+                        <h3 class="project-title">AI-Powered Content Platform</h3>
+                        <p class="project-description">A platform that leverages LLMs and RAG pipelines to generate, summarize, and moderate content at scale. Integrates LangChain, FastAPI, and full-stack deployment.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
                             <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">Transformers</span>
-                            <span class="tech-tag">dotenv</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">RAG</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span class="metric">⚡ &lt;2s latency</span>
+                            <span class="metric">🎯 92% accuracy</span>
+                            <span class="metric">🚀 Live on Render</span>
                         </div>
                         <div class="project-links">
-                            <a href="images\Research Paper Summarizer - LangChain - Opera 2025-06-02 02-13-41.mp4" class="project-link btn-primary" target="_blank">Video Demo</a>
-                            <a href="https://github.com/MohidNaghman1/-Research-Paper-Summarizer" class="project-link btn-secondary github-link" target="_blank">
+                            <a href="https://ai-content-platform-k4b9.onrender.com" class="project-link btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/MohidNaghman1/Ai_Content_Platform" class="project-link btn-secondary github-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CareerGPT -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-fire-alt fa-3x"></i>
+                        <div class="project-overlay">
+                            <span>CareerGPT</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CareerGPT</h3>
+                        <p class="project-description">Conversational AI for career guidance, resume review, and job matching. Built with LLMs, semantic search, and deployed with CI/CD pipelines.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">Semantic Search</span>
+                            <span class="tech-tag">CI/CD</span>
+                        </div>
+                        <div class="project-metrics">
+                            <span class="metric">⚡ &lt;2s latency</span>
+                            <span class="metric">🎯 92% accuracy</span>
+                            <span class="metric">🚀 Live on Render</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://carrer-gpt.vercel.app/" class="project-link btn-primary" target="_blank">Live Demo</a>
+                            <a href="https://github.com/MohidNaghman1/Carrer_Gpt" class="project-link btn-secondary github-link" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -322,28 +193,27 @@
                 <!-- ERP RAG Assistant -->
                 <div class="project-card">
                     <div class="project-image">
-                        <i class="fas fa-university fa-3x"></i>
+                        <i class="fas fa-map-marked-alt fa-3x"></i>
                         <div class="project-overlay">
-                            <span>University ERP Assistant</span>
+                            <span>ERP RAG Assistant</span>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">ERP RAG Assistant</h3>
-                        <p class="project-description">A powerful assistant for university students that uses RAG architecture to extract and answer questions from their ERP system. Features automatic login, attendance tracking, result summary, and more.</p>
+                        <p class="project-description">Retrieval-Augmented Generation assistant for ERP systems. Integrates FAISS, LangGraph, and secure authentication for enterprise-grade document Q&A.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">RAG</span>
-                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">FAISS</span>
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">OAuth2</span>
+                            <span class="tech-tag">Enterprise</span>
                         </div>
-                        <ul style="margin: 1em 0 0 0; padding-left: 1.2em; text-align: left; font-size: 0.98em;">
-                            <li> Authenticated scraping with <b>Selenium</b> to fetch real-time ERP data</li>
-                            <li> <b>FAISS</b> used for semantic retrieval</li>
-                            <li> Built for voice + text queries (Multimodal-ready)</li>
-                        </ul>
+                        <div class="project-metrics">
+                            <span class="metric">⚡ &lt;2s latency</span>
+                            <span class="metric">🎯 92% accuracy</span>
+                            <span class="metric">🚀 Live on Render</span>
+                        </div>
                         <div class="project-links">
-                            <a href="images\Erp_rag_assistant.mp4" class="project-link btn-primary" target="_blank">Video Demo</a>
                             <a href="https://github.com/MohidNaghman1/Erp_Rag_Assistant" class="project-link btn-secondary github-link" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
@@ -351,163 +221,6 @@
                     </div>
                 </div>
 
-                <!-- E-commerce RAG Assistant -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart fa-3x"></i>
-                        <div class="project-overlay">
-                            <span>AI Store Assistant</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">E-commerce RAG Assistant</h3>
-                        <p class="project-description">An intelligent assistant for online shopping platforms, powered by RAG. It helps customers find products, understand features, and get answers based on your store's catalog and policies.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">FAISS</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">RAG</span>
-                        </div>
-                        <ul style="margin: 1em 0 0 0; padding-left: 1.2em; text-align: left; font-size: 0.98em;">
-                            <li> Seamless integration with product database</li>
-                            <li> Indexes product descriptions, FAQs, and reviews</li>
-                            <li> Interactive chatbot interface (supports contextual memory)</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="images\ecommerce_video.mp4" class="project-link btn-primary" target="_blank">Video Demo</a>
-                            <a href="https://github.com/MohidNaghman1/RAG_Project" class="project-link btn-secondary github-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Calories Prediction -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-fire-alt fa-3x"></i>
-                        <div class="project-overlay">
-                            <span>ML Regression Model</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Calories Prediction</h3>
-                        <p class="project-description">A regression-based app that predicts the number of calories burned during physical activity using machine learning models trained on real-world exercise data. Deployed using Streamlit for real-time user interaction.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Streamlit</span>
-                        </div>
-                        <ul style="margin: 1em 0 0 0; padding-left: 1.2em; text-align: left; font-size: 0.98em;">
-                            <li> Utilized regression algorithms to model exercise-calorie relationships</li>
-                            <li> Features include gender, age, duration, heart rate, and body metrics</li>
-                            <li> Implemented cross-validation and error analysis to fine-tune the model</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://caloriesprediction-atxhwxhudkvgqveawhyejc.streamlit.app/" class="project-link btn-primary" target="_blank">Live Demo</a>
-                            <a href="https://github.com/MohidNaghman1/Calories_Prediction" class="project-link btn-secondary github-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Melanoma Cancer Detection -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-microscope fa-3x"></i>
-                        <div class="project-overlay">
-                            <span>Deep Learning Model</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Melanoma Cancer Detection</h3>
-                        <p class="project-description">A deep learning-based system designed to detect melanoma—a deadly form of skin cancer—from dermoscopic images. The model uses convolutional neural networks (CNNs) for automatic image feature extraction and classification.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">CNN</span>
-                            <span class="tech-tag">Deep Learning</span>
-                        </div>
-                        <ul style="margin: 1em 0 0 0; padding-left: 1.2em; text-align: left; font-size: 0.98em;">
-                            <li> Designed a custom CNN architecture for high accuracy and low overfitting</li>
-                            <li> Preprocessed dermoscopic images using data augmentation techniques</li>
-                            <li> Evaluated using precision, recall, F1-score, and confusion matrix</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/MohidNaghman1/Melanoma_Cancer_Detection" class="project-link btn-secondary github-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI-powered Travel Planner -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-map-marked-alt fa-3x"></i>
-                        <div class="project-overlay">
-                            <span>AI-Powered Planning</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI-powered Travel Planner</h3>
-                        <p class="project-description">An AI-Powered Travel Recommendation System that leverages cutting-edge AI technologies such as vector embeddings, language models, and RAG (Retrieval-Augmented Generation) architecture to deliver personalized destination recommendations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">APIs</span>
-                            <span class="tech-tag">AI</span>
-                        </div>
-                        <ul style="margin: 1em 0 0 0; padding-left: 1.2em; text-align: left; font-size: 0.98em;">
-                            <li>Implemented HuggingFace's Zephyr-7B model for generating contextual travel summaries</li>
-                            <li>Deployed FAISS vector database for semantic similarity matching</li>
-                            <li>Developed intelligent filtering algorithms based on user preferences, budget constraints, and seasonal optimization</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="images\opera_cXQ5GKNbYl.mp4" class="project-link btn-primary" target="_blank">Video Demo</a>
-                            <a href="https://github.com/MohidNaghman1/AI-powered-Travel-Planner" class="project-link btn-secondary github-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- YouTube Video Chat -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fab fa-youtube fa-3x"></i>
-                        <div class="project-overlay">
-                            <span>Video Chat with AI</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">YouTube Video Chat</h3>
-                        <p class="project-description">Paste a YouTube link → Ask anything → Get precise answers straight from the video! No more endless scrolling through tutorials, lectures, or podcasts. Just chat. Get what you need. Move on.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">YouTube API</span>
-                        </div>
-                        <ul style="margin: 1em 0 0 0; padding-left: 1.2em; text-align: left; font-size: 0.98em;">
-                            <li> <b>LangChain</b> — the backbone RAG pipeline</li>
-                            <li> <b>FAISS</b> — blazing-fast vector similarity search</li>
-                            <li> <b>Hugging Face</b> — natural language generation</li>
-                            <li> <b>Streamlit</b> — clean, interactive web app</li>
-                            <li> <b>YouTubeTranscriptAPI</b> — subtitle extraction in seconds</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="images\opera_KkIcxLZajO.mp4" class="project-link btn-primary" target="_blank">Video Demo</a>
-                            <a href="https://github.com/MohidNaghman1/Youtube_chat_Rag" class="project-link btn-secondary github-link" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
